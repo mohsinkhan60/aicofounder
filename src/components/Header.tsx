@@ -153,7 +153,7 @@ const Header = () => {
             </div>
           </div>
           <div
-            className="absolute animate-float-2"
+            className="absolute animate-cursor-right"
             style={{ top: "28%", right: "12%" }}
           >
             <div className="relative">

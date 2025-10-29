@@ -1,17 +1,17 @@
 "use client";
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full">
+    <nav className="w-full fixed top-0 left-0 backdrop-blur-lg z-50">
       <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-[69px]">
-        {/* Logo */}
         <div className="flex items-center space-x-2">
-          <a
-            href="/"
+          <Link
+            to="/"
             className="flex items-center text-gray-800 text-lg font-semibold"
           >
             <img
@@ -19,23 +19,22 @@ const Navbar: React.FC = () => {
               alt="AiCoFounder"
               className="h-7 w-auto"
             />
-          </a>
+          </Link>
         </div>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-5">
-          <a
-            href="#"
+          <Link
+            to="#"
             className="text-[#4D4D4C] hover:text-[#B85C44] text-sm font-medium"
           >
             Pricing
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="#"
             className="text-[#4D4D4C] hover:text-[#B85C44] text-sm font-medium"
           >
             Our story
-          </a>
+          </Link>
 
           <div className="flex items-center space-x-3">
             <button className="border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-md hover:bg-[#ECE9E2] transition">
@@ -47,7 +46,6 @@ const Navbar: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center gap-3">
           <button className="bg-[#B85C44] text-white px-4 py-1.5 text-sm font-medium rounded-md hover:bg-[#a8503b] transition">
             Get started
@@ -61,7 +59,6 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Drawer */}
       <div
         className={`fixed md:hidden inset-0 bg-black bg-opacity-30 backdrop-blur-sm transition-opacity duration-300 ${
           isOpen
@@ -76,7 +73,6 @@ const Navbar: React.FC = () => {
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Mobile Drawer Header */}
         <div className="flex justify-between items-center p-5 border-b border-gray-200">
           <div className="flex items-center space-x-2">
             <img
@@ -93,21 +89,20 @@ const Navbar: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Menu Items */}
         <div className="flex flex-col justify-between h-[calc(100%-4rem)] p-6">
           <div className="space-y-4 flex flex-col">
-            <a
-              href="#"
+            <Link
+              to="#"
               className="text-[#333333] hover:text-[#B85C44] font-medium text-lg"
             >
               Pricing
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="#"
               className="text-[#333333] hover:text-[#B85C44] font-medium text-lg"
             >
               Our story
-            </a>
+            </Link>
           </div>
 
           <div className="space-y-4">

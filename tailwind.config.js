@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors: {
+        primary: "#F2F1EC",
+      },
       keyframes: {
         cursorRight: {
           "0%": {
@@ -14,7 +17,7 @@ export default {
         },
       },
       animation: {
-        "cursor-right": "cursorRight 3s linear alternate infinite",
+        "cursor-right": "cursorRight 6s linear alternate infinite",
         "translate-z-ne":
           "translateZNorthEast 2s ease-in-out alternate infinite",
       },

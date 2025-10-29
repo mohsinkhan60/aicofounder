@@ -1,33 +1,16 @@
 const Header = () => {
   return (
-    <section className="relative px-4 lg:px-6 py-[20vh] 2xl:py-64 flex flex-col justify-center">
+    <section className="relative px-4 lg:px-6 py-[20vh] 2xl:py-64 flex flex-col justify-center bg-primary">
       <div className="hidden xl:block absolute inset-0 overflow-hidden pointer-events-none opacity-60">
         <div className="relative w-full h-full max-w-[96rem] mx-auto">
-          <div className="absolute z-10" style={{ bottom: "40%", left: "8%" }}>
-            <div
-              className="w-[120px] h-[120px] rounded-full flex items-center justify-center"
-              style={{
-                backgroundColor: "rgb(255, 236, 179)",
-                border: "1px solid rgba(0, 0, 0, 0.03)",
-                boxShadow: "rgba(0, 0, 0, 0.04) 0px 2px 4px",
-              }}
-            >
+          <div className="absolute z-10 bottom-[40%] left-[8%]">
+            <div className="w-[120px] h-[120px] rounded-full flex items-center justify-center bg-[rgb(255,236,179)] border border-black/[0.03] shadow-[0_2px_4px_rgba(0,0,0,0.04)]">
               <h3 className="text-sm font-medium text-charcoal-600 text-center px-5">
                 Market research
               </h3>
             </div>
           </div>
-          <div
-            className="absolute rounded-md z-10"
-            style={{
-              bottom: "20%",
-              left: "5%",
-              width: 180,
-              backgroundColor: "rgb(250, 250, 247)",
-              border: "1px solid rgba(0, 0, 0, 0.03)",
-              boxShadow: "rgba(0, 0, 0, 0.03) 0px 2px 4px",
-            }}
-          >
+          <div className="absolute rounded-md z-10 bottom-[20%] left-[5%] w-[180px] bg-[rgb(250,250,247)] border border-black/[0.03] shadow-[0_2px_4px_rgba(0,0,0,0.03)]">
             <div className="p-3">
               <h4 className="font-medium text-charcoal-500 mb-2 text-xs">
                 Sources
@@ -66,31 +49,14 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className="absolute z-10" style={{ top: "16%", right: "12%" }}>
-            <div
-              className="w-[120px] h-[120px] rounded-full flex items-center justify-center"
-              style={{
-                backgroundColor: "rgb(200, 230, 201)",
-                border: "1px solid rgba(0, 0, 0, 0.03)",
-                boxShadow: "rgba(0, 0, 0, 0.04) 0px 2px 4px",
-              }}
-            >
+          <div className="absolute z-10 top-[16%] right-[12%]">
+            <div className="w-[120px] h-[120px] rounded-full flex items-center justify-center bg-[rgb(200,230,201)] border border-black/[0.03] shadow-[0_2px_4px_rgba(0,0,0,0.04)]">
               <h3 className="text-sm font-medium text-charcoal-600 text-center px-5">
                 Build product
               </h3>
             </div>
           </div>
-          <div
-            className="absolute rounded-md z-10"
-            style={{
-              top: "35%",
-              right: "5%",
-              width: 200,
-              backgroundColor: "rgb(250, 250, 247)",
-              border: "1px solid rgba(0, 0, 0, 0.03)",
-              boxShadow: "rgba(0, 0, 0, 0.03) 0px 2px 4px",
-            }}
-          >
+          <div className="absolute rounded-md z-10 top-[35%] right-[5%] w-[200px] bg-[rgb(250,250,247)] border border-black/[0.03] shadow-[0_2px_4px_rgba(0,0,0,0.03)]">
             <div className="p-3">
               <div className="flex items-start justify-between mb-3">
                 <h4 className="font-semibold text-charcoal-600 text-sm">
@@ -114,10 +80,7 @@ const Header = () => {
               </div>
               <div>
                 <div className="w-full bg-charcoal-150 rounded-full h-2">
-                  <div
-                    className="bg-terracotta-500 h-2 rounded-full"
-                    style={{ width: "20%" }}
-                  />
+                  <div className="bg-terracotta-500 h-2 rounded-full w-[20%]" />
                 </div>
               </div>
             </div>
@@ -126,18 +89,14 @@ const Header = () => {
       </div>
       <div className="hidden xl:block absolute inset-0 overflow-hidden pointer-events-none opacity-80">
         <div className="relative w-full h-full max-w-[96rem] mx-auto">
-          <div
-            className="absolute animate-float-1"
-            style={{ bottom: "37%", left: "8%" }}
-          >
+          <div className="absolute animate-float-1 bottom-[37%] left-[8%]">
             <div className="relative">
               <svg
                 width={24}
                 height={24}
                 viewBox="0 0 24 24"
                 fill="none"
-                className="text-terracotta-500"
-                style={{ transform: "scaleX(-1)" }}
+                className="text-terracotta-500 -scale-x-100"
               >
                 <path
                   d="M3 3L10.07 19.97L12.58 12.58L19.97 10.07L3 3Z"
@@ -152,10 +111,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div
-            className="absolute animate-cursor-right"
-            style={{ top: "28%", right: "12%" }}
-          >
+          <div className="absolute animate-cursor-right top-[28%] right-[12%]">
             <div className="relative">
               <svg
                 width={24}
@@ -181,29 +137,28 @@ const Header = () => {
       </div>
       <div className="w-full max-w-7xl mx-auto flex-1 flex flex-col">
         <div className="flex-1 flex flex-col items-center justify-center text-center">
-          <div className="mb-4 px-3 py-2 inline-flex items-center bg-gradient-to-r from-charcoal-400 to-charcoal-500 rounded-full shadow-md">
+          <div className="mb-4 px-3 py-2 inline-flex items-center bg-[#363636] rounded-full shadow-md">
             <h1 className="text-[10px] lg:text-[12px] font-medium text-white leading-none">
               AI cofounder
             </h1>
           </div>
-          <h2 className="max-w-xs lg:max-w-2xl mb-2 lg:mb-4 text-2xl lg:text-5xl font-bold text-charcoal-500">
+          <h2 className="max-w-xs lg:max-w-2xl mb-2 lg:mb-4 text-2xl lg:text-5xl font-bold text-[#363636]">
             Make something people actually want
           </h2>
-          <p className="max-w-2xl mb-6 lg:mb-12 text-lg lg:text-xl text-charcoal-350">
+          <p className="max-w-2xl mb-6 lg:mb-12 text-lg lg:text-xl text-[#363636]">
             Research and plan your product with AI
           </p>
           <div className="max-w-3xl w-full">
-            <form className="relative mb-4 p-3 bg-ivory-50 border rounded-3xl shadow-md transition-all duration-200 ease-in-out border-ivory-300 hover:border-charcoal-150">
+            <form className="relative mb-4 p-3 bg-[#FAFAF7] border rounded-3xl shadow-md transition-all duration-200 ease-in-out border-ivory-300 hover:border-charcoal-150">
               <textarea
-                className="w-full pr-12 rounded-md px-2 py-2 text-base text-charcoal-500 bg-transparent placeholder:text-charcoal-250 focus:outline-none resize-none overflow-y-auto"
+                className="w-full pr-12 rounded-md px-2 py-2 text-base text-charcoal-500 bg-transparent placeholder:text-charcoal-250 focus:outline-none resize-none overflow-y-auto min-h-[110px] max-h-[192px] h-[110px]"
                 placeholder="I want to create a platform for remote teams.."
-                style={{ minHeight: 110, maxHeight: 192, height: 110 }}
                 autoFocus
                 defaultValue={""}
               />
               <button
                 type="submit"
-                className="absolute bottom-3 right-3 w-[34px] h-[34px] flex items-center justify-center text-white rounded-[12px] transition-all duration-200 ease-in-out bg-terracotta-500/50 cursor-default"
+                className="absolute bottom-3 right-3 w-[34px] h-[34px] flex items-center justify-center text-white rounded-[12px] transition-all duration-200 ease-in-out bg-[#D9AB9D] cursor-default"
                 aria-label="Send message"
                 disabled
               >

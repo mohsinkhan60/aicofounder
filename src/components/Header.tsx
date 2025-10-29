@@ -1,4 +1,12 @@
+import { useState } from "react";
+
 const Header = () => {
+  const [isPrivacyMode, setIsPrivacyMode] = useState(false);
+
+  const togglePrivacyMode = () => {
+    setIsPrivacyMode(!isPrivacyMode);
+  };
+
   return (
     <section className="relative px-4 lg:px-6 py-[20vh] 2xl:py-64 flex flex-col justify-center bg-primary">
       <div className="hidden xl:block absolute inset-0 overflow-hidden pointer-events-none opacity-60">
@@ -23,7 +31,7 @@ const Header = () => {
                     className="w-3 h-3"
                   />
                   <div className="flex-1">
-                    <div className="h-2 bg-charcoal-150 rounded-full w-full" />
+                    <div className="h-2 bg-[#E3E3E1] rounded-full w-full" />
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -33,7 +41,7 @@ const Header = () => {
                     className="w-3 h-3"
                   />
                   <div className="flex-1">
-                    <div className="h-2 bg-charcoal-150 rounded-full w-3/4" />
+                    <div className="h-2 bg-[#E3E3E1] rounded-full w-3/4" />
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -43,7 +51,7 @@ const Header = () => {
                     className="w-3 h-3"
                   />
                   <div className="flex-1">
-                    <div className="h-2 bg-charcoal-150 rounded-full w-4/5" />
+                    <div className="h-2 bg-[#E3E3E1] rounded-full w-4/5" />
                   </div>
                 </div>
               </div>
@@ -79,8 +87,8 @@ const Header = () => {
                 </svg>
               </div>
               <div>
-                <div className="w-full bg-charcoal-150 rounded-full h-2">
-                  <div className="bg-terracotta-500 h-2 rounded-full w-[20%]" />
+                <div className="w-full bg-[#E3E3E1] rounded-full h-2">
+                  <div className="bg-[#CF9887] h-2 rounded-full w-[20%]" />
                 </div>
               </div>
             </div>
@@ -96,7 +104,7 @@ const Header = () => {
                 height={24}
                 viewBox="0 0 24 24"
                 fill="none"
-                className="text-terracotta-500 -scale-x-100"
+                className="text-[#C47A66] -scale-x-100"
               >
                 <path
                   d="M3 3L10.07 19.97L12.58 12.58L19.97 10.07L3 3Z"
@@ -106,7 +114,7 @@ const Header = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <div className="absolute top-[18px] right-[18px] bg-terracotta-500 text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
+              <div className="absolute top-[18px] right-[18px] bg-[#C47A66] text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
                 AI
               </div>
             </div>
@@ -118,7 +126,7 @@ const Header = () => {
                 height={24}
                 viewBox="0 0 24 24"
                 fill="none"
-                className="text-charcoal-400"
+                className="text-[#595958]"
               >
                 <path
                   d="M3 3L10.07 19.97L12.58 12.58L19.97 10.07L3 3Z"
@@ -128,7 +136,7 @@ const Header = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <div className="absolute top-[18px] left-[18px] bg-charcoal-500 text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
+              <div className="absolute top-[18px] left-[18px] bg-[#595958] text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
                 You
               </div>
             </div>
@@ -178,7 +186,7 @@ const Header = () => {
             <div className="flex justify-between items-center">
               <button
                 type="button"
-                className="flex items-center gap-1.5 lg:gap-2 px-3 lg:px-4 py-1.5 lg:py-2 bg-gradient-to-b from-ivory-50 to-ivory-100 hover:bg-ivory-100 border border-ivory-300 hover:border-charcoal-150 text-charcoal-450 rounded-full shadow-sm transition-all duration-200 ease-in-out z-10"
+                className="flex items-center gap-1.5 lg:gap-2 px-3 lg:px-4 py-1.5 lg:py-2 bg-[#F8F7F4] hover:bg-ivory-100 border border-ivory-300 hover:border-charcoal-150 text-charcoal-450 rounded-full shadow-sm transition-all duration-200 ease-in-out z-10"
                 aria-label="Brainstorm ideas"
               >
                 <svg
@@ -204,24 +212,39 @@ const Header = () => {
                     fill="currentColor"
                     strokeWidth={0}
                     viewBox="0 0 256 256"
-                    className="w-3.5 h-3.5 lg:w-4 lg:h-4 text-charcoal-350"
+                    className={`w-3.5 h-3.5 lg:w-4 lg:h-4 transition-colors duration-200 ${
+                      isPrivacyMode ? "text-[#856ED8]" : "text-[#404040]"
+                    }`}
                     height="1em"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path d="M244,104H219.21L175.82,44.24a20,20,0,0,0-31.61-.94L131.39,58.16c-.1.11-.2.23-.29.35a4,4,0,0,1-6.2,0c-.09-.12-.19-.24-.29-.35L111.79,43.3a20,20,0,0,0-31.61.94L36.79,104H12a12,12,0,0,0,0,24H244a12,12,0,0,0,0-24ZM96.62,62.45l9.69,11.24a28,28,0,0,0,43.38,0l9.69-11.24L189.55,104H66.45ZM180,140a40.07,40.07,0,0,0-38.16,28H114.16a40,40,0,1,0,0,24h27.68A40,40,0,1,0,180,140ZM76,196a16,16,0,1,1,16-16A16,16,0,0,1,76,196Zm104,0a16,16,0,1,1,16-16A16,16,0,0,1,180,196Z" />
                   </svg>
-                  <span className="mr-0.5 lg:mr-1 text-xs lg:text-sm font-medium text-charcoal-450">
+                  <span
+                    className={`mr-0.5 lg:mr-1 text-xs lg:text-sm font-medium transition-colors duration-200 ${
+                      isPrivacyMode ? "text-[#856ED8]" : "text-[#404040]"
+                    }`}
+                  >
                     Privacy mode
                   </span>
                   <button
                     type="button"
-                    className="relative inline-flex h-5 w-9 lg:h-6 lg:w-11 items-center rounded-lg transition-colors duration-200 ease-in-out focus:outline-none bg-ivory-400"
+                    onClick={togglePrivacyMode}
+                    className={`relative inline-flex h-5 w-9 lg:h-6 lg:w-11 items-center rounded-lg transition-colors duration-200 ease-in-out focus:outline-none ${
+                      isPrivacyMode ? "bg-[#856ED8]" : "bg-[#D1CEC0]"
+                    }`}
                     aria-label="Toggle privacy mode"
-                    aria-pressed="false"
+                    aria-pressed={isPrivacyMode}
                   >
                     <span className="sr-only">Enable privacy mode</span>
-                    <span className="inline-block h-3.5 w-3.5 lg:h-4 lg:w-4 transform rounded-md bg-ivory-50 shadow-sm transition-transform duration-200 ease-in-out translate-x-0.5 lg:translate-x-1" />
+                    <span
+                      className={`inline-block h-3.5 w-3.5 lg:h-4 lg:w-4 transform rounded-md bg-[#FAFAF7] shadow-sm transition-transform duration-200 ease-in-out ${
+                        isPrivacyMode
+                          ? "translate-x-4 lg:translate-x-6"
+                          : "translate-x-0.5 lg:translate-x-1"
+                      }`}
+                    />
                   </button>
                 </div>
               </div>

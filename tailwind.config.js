@@ -15,11 +15,20 @@ export default {
             transform: "translate3d(40px, -30px, 30px)",
           },
         },
+        float1: {
+          "0%, 100%": {
+            transform: "translate3d(0, 0, 0)",
+          },
+          "50%": {
+            transform: "translate3d(20px, -20px, 20px)",
+          },
+        },
       },
       animation: {
-        "cursor-right": "cursorRight 6s linear alternate infinite",
+        "cursor-right": "cursorRight 8s linear alternate infinite",
         "translate-z-ne":
-          "translateZNorthEast 2s ease-in-out alternate infinite",
+          "translateZNorthEast 6s ease-in-out alternate infinite",
+        "float-1": "float1 8s ease-in-out infinite",
       },
     },
   },

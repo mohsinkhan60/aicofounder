@@ -110,11 +110,11 @@ const Navbar: React.FC = () => {
             </a>
           </div>
 
-          <div className="space-y-3">
-            <button className="w-full px-4 py-3 bg-[#c1603f] text-white font-medium rounded-lg hover:bg-[#a85035] transition">
+          <div className="space-y-4">
+            <button className="w-full text-[17px] px-4 py-[11px] bg-[#B85C44] text-white font-normal rounded-lg hover:bg-[#a85035] transition">
               Get started
             </button>
-            <button className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-800 hover:bg-gray-100 transition">
+            <button className="w-full text-[17px] px-4 py-[11px] border border-gray-300 font-normal rounded-lg text-black hover:bg-gray-100 transition">
               Sign in
             </button>
           </div>

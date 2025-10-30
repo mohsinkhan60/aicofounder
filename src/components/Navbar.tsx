@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="w-full fixed top-0 left-0 z-50">
       <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-[69px]">
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center">
           <Link
             to="/"
             className="flex items-center text-gray-800 text-lg font-semibold"
@@ -17,22 +17,16 @@ const Navbar: React.FC = () => {
             <img
               src="/images/aicofounder-logo-black.svg"
               alt="AiCoFounder"
-              className="h-7 w-auto"
+              className="h-5 sm:h-6 md:h-7 w-auto"
             />
           </Link>
         </div>
 
         <div className="hidden md:flex items-center space-x-4">
-          <Link
-            to="#"
-            className="text-[#4D4D4C] hover:text-[#B85C44] text-sm"
-          >
+          <Link to="#" className="text-[#4D4D4C] hover:text-[#B85C44] text-sm">
             Pricing
           </Link>
-          <Link
-            to="#"
-            className="text-[#4D4D4C] hover:text-[#B85C44] text-sm"
-          >
+          <Link to="#" className="text-[#4D4D4C] hover:text-[#B85C44] text-sm">
             Our story
           </Link>
 
@@ -106,10 +100,10 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="space-y-4">
-            <button className="w-full text-[17px] px-4 py-[11px] bg-[#B85C44] text-white font-normal rounded-lg hover:bg-[#a85035] transition">
+            <button className="w-full text-base px-4 py-2.5 bg-[#B85C44] text-white font-normal rounded-lg hover:bg-[#a85035] transition">
               Get started
             </button>
-            <button className="w-full text-[17px] px-4 py-[11px] border border-gray-300 font-normal rounded-lg text-black hover:bg-gray-100 transition">
+            <button className="w-full text-base px-4 py-2.5 border border-gray-300 font-normal rounded-lg text-black hover:bg-gray-100 transition">
               Sign in
             </button>
           </div>

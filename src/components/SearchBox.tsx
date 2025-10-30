@@ -4,9 +4,11 @@ import { useState } from "react";
 const SearchBox = () => {
   const [isPrivacyMode, setIsPrivacyMode] = useState(false);
   const [textValue, setTextValue] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
 
   const togglePrivacyMode = () => {
     setIsPrivacyMode(!isPrivacyMode);
+    setShowPopup(false);
   };
 
   return (
@@ -25,7 +27,6 @@ const SearchBox = () => {
               ? "bg-[#B85C44] cursor-pointer"
               : "bg-[#D9AB9D] cursor-default"
           }`}
-          aria-label="Send message"
           disabled={!textValue.trim()}
         >
           <ArrowUp className="w-[1.15rem] stroke-3" />
@@ -44,7 +45,11 @@ const SearchBox = () => {
         </button>
 
         <div className="relative">
-          <div className="flex items-center gap-1.5 lg:gap-2">
+          <div
+            className="flex items-center gap-1.5 lg:gap-2"
+            onMouseEnter={() => setShowPopup(true)}
+            onMouseLeave={() => setShowPopup(false)}
+          >
             <HatGlasses
               className={`w-3.5 h-3.5 lg:w-4 lg:h-4 transition-colors duration-200 ${
                 isPrivacyMode ? "text-[#856ED8]" : "text-[#404040]"
@@ -73,6 +78,13 @@ const SearchBox = () => {
               />
             </button>
           </div>
+
+          {showPopup && (
+            <div className="absolute top-full mt-2 text-[15px] -left-11 bg-charcoal-500 text-[#404040] bg-[#FAFAF7] text-xs px-3 py-2 rounded-lg shadow-lg whitespace-nowrap">
+              Your project won't be used for training
+              <div className="absolute bottom-full right-4 -mb-1 border-4 border-transparent border-b-charcoal-500" />
+            </div>
+          )}
         </div>
       </div>
     </div>

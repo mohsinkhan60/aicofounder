@@ -3,6 +3,7 @@ import { useState } from "react";
 
 const SearchBox = () => {
   const [isPrivacyMode, setIsPrivacyMode] = useState(false);
+  const [textValue, setTextValue] = useState("");
 
   const togglePrivacyMode = () => {
     setIsPrivacyMode(!isPrivacyMode);
@@ -14,12 +15,18 @@ const SearchBox = () => {
         <textarea
           className="w-full pr-12 rounded-md px-2 py-2 text-base text-charcoal-500 bg-transparent placeholder:text-charcoal-250 focus:outline-none resize-none overflow-y-auto min-h-[110px] max-h-[192px] h-[110px]"
           placeholder="I want to create a platform for remote teams.."
+          value={textValue}
+          onChange={(e) => setTextValue(e.target.value)}
         />
         <button
           type="submit"
-          className="absolute bottom-3 right-3 w-[34px] h-[34px] flex items-center justify-center text-white rounded-[12px] transition-all duration-200 ease-in-out bg-[#D9AB9D] cursor-default"
+          className={`absolute bottom-3 right-3 w-[34px] h-[34px] flex items-center justify-center text-white rounded-[12px] transition-all duration-200 ease-in-out ${
+            textValue.trim()
+              ? "bg-[#B85C44] cursor-pointer"
+              : "bg-[#D9AB9D] cursor-default"
+          }`}
           aria-label="Send message"
-          disabled
+          disabled={!textValue.trim()}
         >
           <ArrowUp className="w-[1.15rem] stroke-3" />
         </button>

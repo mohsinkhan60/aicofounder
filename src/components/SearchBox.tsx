@@ -8,7 +8,11 @@ const SearchBox = () => {
 
   const togglePrivacyMode = () => {
     setIsPrivacyMode(!isPrivacyMode);
-    setShowPopup(false);
+    if (isPrivacyMode) {
+      setShowPopup(true);
+    } else {
+      setShowPopup(false);
+    }
   };
 
   return (

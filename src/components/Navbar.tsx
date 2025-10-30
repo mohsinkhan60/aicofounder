@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full fixed top-0 left-0 backdrop-blur-lg z-50">
+    <nav className="w-full fixed top-0 left-0 z-50">
       <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-[69px]">
         <div className="flex items-center space-x-2">
           <Link
@@ -22,21 +22,21 @@ const Navbar: React.FC = () => {
           </Link>
         </div>
 
-        <div className="hidden md:flex items-center space-x-5">
+        <div className="hidden md:flex items-center space-x-4">
           <Link
             to="#"
-            className="text-[#4D4D4C] hover:text-[#B85C44] text-sm font-medium"
+            className="text-[#4D4D4C] hover:text-[#B85C44] text-sm"
           >
             Pricing
           </Link>
           <Link
             to="#"
-            className="text-[#4D4D4C] hover:text-[#B85C44] text-sm font-medium"
+            className="text-[#4D4D4C] hover:text-[#B85C44] text-sm"
           >
             Our story
           </Link>
 
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 md:pl-2">
             <button className="border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-md hover:bg-[#ECE9E2] transition">
               Sign in
             </button>

@@ -3,7 +3,21 @@ import SearchBox from "./SearchBox";
 
 const Header = () => {
   return (
-    <section className="relative px-4 lg:px-6 py-[20vh] 2xl:py-64 flex flex-col justify-center bg-primary">
+    <section className="relative px-4 lg:px-6 py-[20vh] 2xl:py-64 flex flex-col justify-center">
+      {/* <div
+        className="absolute inset-x-0 top-0 z-10 pointer-events-none"
+        style={{
+          height: "100vh",
+          backgroundImage:
+            "radial-gradient(circle, rgba(200, 197, 190, 0.8) 2px, transparent 2px)",
+          backgroundSize: "40px 40px",
+          backgroundPosition: "25px 30px",
+          opacity: "0.5",
+          zIndex: 0,
+          maskImage: "linear-gradient(black 0%, black 70%, transparent 100%)",
+        }}
+      /> */}
+
       <div className="hidden xl:block absolute inset-0 overflow-hidden pointer-events-none opacity-60">
         <div className="relative w-full h-full max-w-[96rem] mx-auto">
           <div className="absolute z-10 bottom-[40%] left-[8%] w-[120px] h-[120px] rounded-full flex items-center justify-center bg-[rgb(255,236,179)] border border-black/[0.03] shadow-[0_2px_4px_rgba(0,0,0,0.04)]">
@@ -19,31 +33,19 @@ const Header = () => {
               </h4>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
-                  <img
-                    src="/icons/favicon.ico"
-                    alt=""
-                    className="w-3 h-3"
-                  />
+                  <img src="/icons/favicon.ico" alt="" className="w-3 h-3" />
                   <div className="flex-1">
                     <div className="h-2 bg-[#E3E3E1] rounded-full w-full" />
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <img
-                    src="/icons/favicons.ico"
-                    alt=""
-                    className="w-3 h-3"
-                  />
+                  <img src="/icons/favicons.ico" alt="" className="w-3 h-3" />
                   <div className="flex-1">
                     <div className="h-2 bg-[#E3E3E1] rounded-full w-3/4" />
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <img
-                    src="/icons/faviconss.ico"
-                    alt=""
-                    className="w-3 h-3"
-                  />
+                  <img src="/icons/faviconss.ico" alt="" className="w-3 h-3" />
                   <div className="flex-1">
                     <div className="h-2 bg-[#E3E3E1] rounded-full w-4/5" />
                   </div>

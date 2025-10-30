@@ -84,9 +84,8 @@ const SearchBox = () => {
           </div>
 
           {showPopup && (
-            <div className="hidden lg:block absolute top-full mt-2 text-[15px] -left-11 bg-charcoal-500 text-[#404040] bg-[#FAFAF7] px-3 py-1 rounded-lg shadow-lg whitespace-nowrap">
+            <div className="hidden lg:block text-sm absolute top-full mt-2 text-[15px] -left-11 bg-charcoal-500 text-[#404040] bg-[#FAFAF7] px-3 py-1 rounded-lg shadow-lg whitespace-nowrap">
               Your project won't be used for training
-              <div className="absolute bottom-full right-4 -mb-1 border-4 border-transparent border-b-charcoal-500" />
             </div>
           )}
         </div>

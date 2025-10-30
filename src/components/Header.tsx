@@ -20,8 +20,8 @@ const Header = () => {
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
                   <img
-                    src="https://www.reddit.com/favicon.ico"
-                    alt="Reddit"
+                    src="/icons/favicon.ico"
+                    alt=""
                     className="w-3 h-3"
                   />
                   <div className="flex-1">
@@ -30,8 +30,8 @@ const Header = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <img
-                    src="https://x.com/favicon.ico"
-                    alt="X"
+                    src="/icons/favicons.ico"
+                    alt=""
                     className="w-3 h-3"
                   />
                   <div className="flex-1">
@@ -40,8 +40,8 @@ const Header = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <img
-                    src="https://cdn.ncbi.nlm.nih.gov/coreutils/nwds/img/favicons/favicon.ico"
-                    alt="PubMed"
+                    src="/icons/faviconss.ico"
+                    alt=""
                     className="w-3 h-3"
                   />
                   <div className="flex-1">

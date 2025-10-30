@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
             className="flex items-center text-gray-800 text-lg font-semibold"
           >
             <img
-              src="/aicofounder-logo-black.svg"
+              src="/images/aicofounder-logo-black.svg"
               alt="AiCoFounder"
               className="h-7 w-auto"
             />
@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center p-5 border-b border-gray-200">
           <div className="flex items-center space-x-2">
             <img
-              src="/aicofounder-logo.svg"
+              src="/images/aicofounder-logo.svg"
               alt="AiCoFounder"
               className="h-5 w-auto"
             />

@@ -6,6 +6,27 @@ const Header = () => {
     <section className="relative px-4 lg:px-6 py-[20vh] 2xl:py-64 flex flex-col justify-center">
       <div className="hidden xl:block absolute inset-0 overflow-hidden pointer-events-none opacity-60">
         <div className="relative w-full h-full max-w-[96rem] mx-auto">
+          <div
+            className="absolute z-0 border-l-2 border-dashed border-gray-400"
+            style={{
+              bottom: "25%",
+              left: "11.5%",
+              height: "20%",
+              transform: "rotate(4deg)",
+              opacity: 0.4,
+            }}
+          />
+          <div
+            className="absolute z-0 border-l-2 border-dashed border-gray-400"
+            style={{
+              top: "20%",
+              right: "15%",
+              height: "15%",
+              transform: "rotate(-23deg)",
+              opacity: 0.4,
+            }}
+          />
+
           <div className="absolute z-10 bottom-[40%] left-[8%] w-[120px] h-[120px] rounded-full flex items-center justify-center bg-[rgb(255,236,179)] border border-black/[0.03] shadow-[0_2px_4px_rgba(0,0,0,0.04)]">
             <h3 className="text-sm font-medium text-charcoal-600 text-center px-5">
               Market research

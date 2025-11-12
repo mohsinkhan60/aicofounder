@@ -67,8 +67,8 @@ const Navbar: React.FC = () => {
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex justify-between items-center p-5 border-b border-gray-200">
-          <div className="flex items-center space-x-2">
+        <div className="flex justify-between items-center p-[22px] border-b border-gray-200">
+          <div className="flex items-center">
             <img
               src="/images/aicofounder-logo.svg"
               alt="AiCoFounder"
@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
             onClick={() => setIsOpen(false)}
             className="text-gray-800 focus:outline-none"
           >
-            <X size={22} />
+            <X size={18} />
           </button>
         </div>
 
@@ -100,10 +100,10 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="space-y-4">
-            <button className="w-full text-base px-4 py-2.5 bg-[#B85C44] text-white font-normal rounded-lg hover:bg-[#a85035] transition">
+            <button className="w-full text-base px-4 py-[12px] bg-[#B85C44] text-white font-normal rounded-md hover:bg-[#a85035] transition">
               Get started
             </button>
-            <button className="w-full text-base px-4 py-2.5 border border-gray-300 font-normal rounded-lg text-black hover:bg-gray-100 transition">
+            <button className="w-full text-base px-4 py-[12px] border border-gray-300 font-normal rounded-md text-black hover:bg-[#eceae4] transition">
               Sign in
             </button>
           </div>

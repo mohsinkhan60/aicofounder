@@ -28,7 +28,7 @@ const Header = () => {
           />
 
           <div className="absolute z-10 bottom-[40%] left-[8%] w-[120px] h-[120px] rounded-full flex items-center justify-center bg-[rgb(255,236,179)] border border-black/[0.03] shadow-[0_2px_4px_rgba(0,0,0,0.04)]">
-            <h3 className="text-sm font-medium text-charcoal-600 text-center px-5">
+            <h3 className="text-sm text-gray-800 font-medium text-charcoal-600 text-center px-5">
               Market research
             </h3>
           </div>
@@ -74,8 +74,8 @@ const Header = () => {
           </div>
 
           <div className="absolute z-10 top-[16%] right-[12%]">
-            <div className="w-[120px] h-[120px] rounded-full flex items-center justify-center bg-[rgb(200,230,201)] border border-black/[0.03] shadow-[0_2px_4px_rgba(0,0,0,0.04)]">
-              <h3 className="text-sm font-medium text-charcoal-600 text-center px-5">
+            <div className="w-[120px] h-[120px] rounded-full flex items-center justify-center bg-[rgba(200,230,201,0.9)] border border-black/[0.03] shadow-[0_2px_4px_rgba(0,0,0,0.04)]">
+              <h3 className="text-sm text-gray-800 font-medium text-charcoal-600 text-center px-5">
                 Build product
               </h3>
             </div>
@@ -91,7 +91,7 @@ const Header = () => {
               </div>
               <div>
                 <div className="w-full bg-[#E3E3E1] rounded-full h-2">
-                  <div className="bg-[#CF9887] h-2 rounded-full w-[20%]" />
+                  <div className="bg-[#bc664f] h-2 rounded-full w-[20%]" />
                 </div>
               </div>
             </div>
@@ -103,8 +103,8 @@ const Header = () => {
         <div className="relative w-full h-full max-w-[96rem] mx-auto">
           <div className="absolute animate-float-1 bottom-[37%] left-[8%]">
             <div className="relative">
-              <MousePointer2 className="w-6 h-6 text-[#C47A66] -scale-x-100 fill-[#C47A66]" />
-              <div className="absolute top-[18px] right-[18px] bg-[#C47A66] text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
+              <MousePointer2 className="w-6 h-6 text-[#bc664f] -scale-x-100 fill-[#bc664f]" />
+              <div className="absolute top-[18px] right-[18px] bg-[#bc664f] text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
                 AI
               </div>
             </div>
@@ -112,8 +112,8 @@ const Header = () => {
 
           <div className="absolute animate-cursor-right top-[28%] right-[12%]">
             <div className="relative">
-              <MousePointer2 className="w-6 h-6 text-[#595958] fill-[#595958]" />
-              <div className="absolute top-[18px] left-[18px] bg-[#595958] text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
+              <MousePointer2 className="w-6 h-6 text-[#343434] fill-[#343434]" />
+              <div className="absolute top-[18px] left-[18px] bg-[#343434] text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
                 You
               </div>
             </div>

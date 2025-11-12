@@ -46,7 +46,7 @@ const Header = () => {
                     className="w-3 h-3"
                   />
                   <div className="flex-1">
-                    <div className="h-2 bg-[#E3E3E1] rounded-full w-full" />
+                    <div className="h-2 bg-[#d5d5d4] rounded-full w-full" />
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -56,7 +56,7 @@ const Header = () => {
                     className="w-3 h-3"
                   />
                   <div className="flex-1">
-                    <div className="h-2 bg-[#E3E3E1] rounded-full w-3/4" />
+                    <div className="h-2 bg-[#d5d5d4] rounded-full w-3/4" />
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -66,7 +66,7 @@ const Header = () => {
                     className="w-3 h-3"
                   />
                   <div className="flex-1">
-                    <div className="h-2 bg-[#E3E3E1] rounded-full w-4/5" />
+                    <div className="h-2 bg-[#d5d5d4] rounded-full w-4/5" />
                   </div>
                 </div>
               </div>
@@ -75,7 +75,7 @@ const Header = () => {
 
           <div className="absolute z-10 top-[16%] right-[12%]">
             <div className="w-[120px] h-[120px] rounded-full flex items-center justify-center bg-[rgba(200,230,201,0.9)] border border-black/[0.03] shadow-[0_2px_4px_rgba(0,0,0,0.04)]">
-              <h3 className="text-sm text-gray-800 font-medium text-charcoal-600 text-center px-5">
+              <h3 className="text-sm text-gray-800 font-medium text-center px-5">
                 Build product
               </h3>
             </div>
@@ -83,11 +83,11 @@ const Header = () => {
 
           <div className="absolute rounded-md z-10 top-[35%] right-[5%] w-[200px] bg-[rgb(250,250,247)] border border-black/[0.03] shadow-[0_2px_4px_rgba(0,0,0,0.03)]">
             <div className="p-3">
-              <div className="flex items-start justify-between mb-3">
-                <h4 className="font-semibold text-charcoal-600 text-sm">
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="font-semibold text-gray-800 text-sm">
                   Development plan
                 </h4>
-                <ChevronDown className="w-3 h-3" />
+                <ChevronDown className="w-[11px] h-[11px]" />
               </div>
               <div>
                 <div className="w-full bg-[#E3E3E1] rounded-full h-2">

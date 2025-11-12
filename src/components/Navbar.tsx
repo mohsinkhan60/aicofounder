@@ -1,13 +1,27 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-50">
+    <nav
+      className={`w-full fixed top-0 left-0 z-50 transition-all duration-200 ${
+        isScrolled ? "backdrop-blur-md bg-white/10" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-[69px]">
         <div className="flex items-center">
           <Link

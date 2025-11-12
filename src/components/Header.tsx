@@ -90,7 +90,7 @@ const Header = () => {
                 <ChevronDown className="w-[11px] h-[11px]" />
               </div>
               <div>
-                <div className="w-full bg-[#E3E3E1] rounded-full h-2">
+                <div className="w-full bg-[#d5d5d4] rounded-full h-2">
                   <div className="bg-[#bc664f] h-2 rounded-full w-[20%]" />
                 </div>
               </div>

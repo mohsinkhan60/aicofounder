@@ -1,10 +1,12 @@
 import { ArrowUp, HatGlasses, Lightbulb } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const SearchBox = () => {
   const [isPrivacyMode, setIsPrivacyMode] = useState(false);
   const [textValue, setTextValue] = useState("");
   const [showPopup, setShowPopup] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const togglePrivacyMode = () => {
     setIsPrivacyMode(!isPrivacyMode);
@@ -40,6 +42,7 @@ const SearchBox = () => {
       <div className="flex justify-between items-center">
         <button
           type="button"
+          onClick={() => setShowModal(true)}
           className="flex items-center gap-1.5 lg:gap-2 px-3 lg:px-4 py-1.5 lg:py-2 bg-[#F8F7F4] hover:bg-ivory-100 border border-ivory-300 hover:border-charcoal-150 text-charcoal-450 rounded-full shadow-sm transition-all duration-200 ease-in-out z-10"
         >
           <Lightbulb className="w-4 h-4" />
@@ -89,6 +92,53 @@ const SearchBox = () => {
             </div>
           )}
         </div>
+        {showModal && (
+          <div className="fixed inset-0 z-50 overflow-y-auto">
+            <div
+              className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
+              onClick={() => setShowModal(false)}
+            />
+
+            <div className="min-h-full p-4 flex items-center justify-center">
+              <div
+                className="relative bg-[#F2F1EC] w-full max-w-md p-6 bg-ivory-200 rounded-xl shadow-xl transition-all transform overflow-hidden"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="text-center">
+                  <div className="flex items-center">
+                    <img
+                      src="/images/aicofounder-logo.svg"
+                      alt="AiCoFounder"
+                      className="h-10 mt-2 mb-6 mx-auto cursor-default"
+                    />
+                  </div>
+                  <h2 className="mb-2 text-xl font-bold text-charcoal-500">
+                    Join and start building
+                  </h2>
+                  <p className="mb-6 text-charcoal-350">
+                    Sign in or create a free account
+                  </p>
+                  <div className="space-y-3">
+                    <Link
+                      className="block bg-[#B85C44] hover:bg-[#a54e34] w-full py-2 px-4 text-sm font-medium rounded-md text-white bg-terracotta-500 hover:bg-terracotta-600 transition duration-200 ease-in-out"
+                      to="#"
+                      onClick={() => setShowModal(false)}
+                    >
+                      Sign up
+                    </Link>
+                    <Link
+                      className="block w-full py-2 px-4 text-sm font-medium rounded-md bg-ivory-300 hover:bg-ivory-350 transition duration-200 ease-in-out bg-[#E8E6DD] text-black hover:bg-[#DCD8CC]"
+                      to="#"
+                      onClick={() => setShowModal(false)}
+                    >
+                      Sign in
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
